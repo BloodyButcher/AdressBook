@@ -30,51 +30,51 @@ Private Sub cmdClose_Click()
     End If
 End Sub
 
-Private Sub cmdDelete_Click()
+Private Sub cmdDelete_Click() 'delete button
     TRows = Worksheets("Data").Range("A1").CurrentRegion.Rows.Count
     Dim strDel
     strDel = MsgBox("Delete ?", vbYesNo, "Delete")
     If strDel = vbYes Then
         For i = 2 To TRows
             If Trim(Worksheets("Data").Cells(i, 1).Value) = Trim(ComboBox1.Text) Then
-                
-              '  Sheet1.Range(i & ":" & i).Delete
+
+                '  Sheet1.Range(i & ":" & i).Delete
                 Worksheets("Data").Range(i & ":" & i).Delete
-                
-                txtSAP_NR.Text = ""
-                txtCUSTOMER.Text = ""
-                txtCITY.Text = ""
-                txtPOSTAL_CODE.Text = ""
-                txtSTREET.Text = ""
-                txtSALES_REPRESENTATIVE.Text = ""
-                txtTEL_REPRESENTATIVE.Text = ""
-                txtKAM.Text = ""
-                txtCC.Text = ""
-                txtCONTACT_PERSON.Text = ""
-                txtPOSITION.Text = ""
-                txtTEL_1.Text = ""
-                txtTEL_2.Text = ""
-                txtemail.Text = ""
+
+                txtSAP_NR.Text = "" 'Customer SAP number
+                txtCUSTOMER.Text = "" 'Cusotmer name
+                txtCITY.Text = "" 'Customer city
+                txtPOSTAL_CODE.Text = "" ' CUstomer postal code
+                txtSTREET.Text = "" 'Customer street name
+                txtSALES_REPRESENTATIVE.Text = "" 'Customer sales representative
+                txtTEL_REPRESENTATIVE.Text = "" 'Phone number to sales representative
+                txtKAM.Text = "" 'Key Account Manager
+                txtCC.Text = "" 'Customer care employee responsible for client
+                txtCONTACT_PERSON.Text = "" 'Contact person on customer side
+                txtPOSITION.Text = "" 'Contatc person position on customer side
+                txtTEL_1.Text = "" '1st Telephone number to customer
+                txtTEL_2.Text = "" '2nd telephone number to cusotmer
+                txtemail.Text = "" 'Customer e-mail adress
                 txtFAX.Text = ""
-                txtSOLD_TO.Text = ""
-                txtACTIVE.Text = ""
-                txtCC2.Text = ""
-                txtCC_2.Text = ""
-                CheckBoxPon.Value = ""
-                CheckBoxWt.Value = ""
-                CheckBoxSr.Value = ""
-                CheckBoxCzw.Value = ""
-                CheckBoxPia.Value = ""
-                CheckBoxSo.Value = ""
-                txtForm.Text = ""
-                txtUnit.Text = ""
-                txtPLOD.Text = ""
-                txtWHS.Text = ""
-                txtCOT.Text = ""
-                txtCOMMENTS.Text = ""
-                txtINFO.Text = ""
-                Call prComboBoxFill
-                
+                txtSOLD_TO.Text = "" 'optional when goods are sold to another customer number
+                txtACTIVE.Text = "" 'is the customer active
+                txtCC2.Text = "" 'Customer care employee responsible for client when main person is off
+                txtCC_2.Text = "" 'Customer care employee responsible for client- shortcut
+                CheckBoxMon.Value = "" 'check box for Monday
+                CheckBoxTue.Value = "" 'check box for Tuesday
+                CheckBoxWed.Value = "" 'check box for Wednesday
+                CheckBoxThu.Value = "" 'check box for Thuesday
+                CheckBoxFri.Value = "" 'check box for Friday
+                CheckBoxSat.Value = "" 'check box for Saturday
+                txtForm.Text = "" 'How client make and order
+                txtUnit.Text = "" 'Unit on order
+                txtPLOD.Text = "" 'Route
+                txtWHS.Text = "" 'Warehouse
+                txtCOT.Text = "" '
+                txtCOMMENTS.Text = "" 'Cut of time
+                txtINFO.Text = "" 'additional information
+                Call prComboBoxFill()
+
                 Exit For
             End If
         Next i
@@ -90,7 +90,7 @@ Private Sub cmdDelete_Click()
 
 
     End If
-    
+
     If Trim(txtSAP_NR.Text) = "" Then
         cmdSave.Enabled = False
         cmdDelete.Enabled = False
