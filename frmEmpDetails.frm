@@ -70,8 +70,8 @@ Private Sub cmdDelete_Click() 'delete button
                 txtUnit.Text = "" 'Unit on order
                 txtPLOD.Text = "" 'Route
                 txtWHS.Text = "" 'Warehouse
-                txtCOT.Text = "" '
-                txtCOMMENTS.Text = "" 'Cut of time
+                txtCOT.Text = "" 'Cut of time
+                txtCOMMENTS.Text = "" '
                 txtINFO.Text = "" 'additional information
                 Call prComboBoxFill()
 
