@@ -128,12 +128,12 @@ Private Sub cmdNew_Click()
                 txtACTIVE.Text = ""
                 txtCC2.Text = ""
                 txtCC_2.Text = ""
-                CheckBoxPon.Value = "0"
-                CheckBoxWt.Value = "0"
-                CheckBoxSr.Value = "0"
-                CheckBoxCzw.Value = "0"
-                CheckBoxPia.Value = "0"
-                CheckBoxSo.Value = "0"
+                CheckBoxMon.Value = "0"
+                CheckBoxTue.Value = "0"
+                CheckBoxWed.Value = "0"
+                CheckBoxThu.Value = "0"
+                CheckBoxFri.Value = "0"
+                CheckBoxSat.Value = "0"
                 txtForm.Text = ""
                 txtUnit.Text = ""
                 txtPLOD.Text = ""
@@ -169,26 +169,26 @@ Private Sub prSave()
         TRows = Worksheets("Data").Range("A1").CurrentRegion.Rows.Count
         With Worksheets("Data").Range("A1")
             .Offset(TRows, 0).Value = txtSAP_NR.Text
-            .Offset(TRows, 1).Value = txtKLIENT.Text
-            .Offset(TRows, 2).Value = txtMIASTO.Text
-            .Offset(TRows, 3).Value = txtKOD_POCZTOWY.Text
-            .Offset(TRows, 4).Value = txtULICA.Text
-            .Offset(TRows, 5).Value = txtPRZEDSTAWICIEL_HANDLOWY.Text
-            .Offset(TRows, 6).Value = txtTEL_PRZEDSTAWICIEL.Text
+            .Offset(TRows, 1).Value = txtCUSTOMER.Text
+            .Offset(TRows, 2).Value = txtCITY.Text
+            .Offset(TRows, 3).Value = txtPOSTAL_CODE.Text
+            .Offset(TRows, 4).Value = txtSTREET.Text
+            .Offset(TRows, 5).Value = txtSALES_REPRESENTATIVE.Text
+            .Offset(TRows, 6).Value = txtTEL_REPRESENTATIVE.Text
             .Offset(TRows, 7).Value = txtKAM.Text
             .Offset(TRows, 8).Value = txtCC.Text
-            .Offset(TRows, 9).Value = txtOSOBA_KONTAKTOWA.Text
-            .Offset(TRows, 10).Value = txtSTANOWISKO.Text
+            .Offset(TRows, 9).Value = txtCONTACT_PERSON.Text
+            .Offset(TRows, 10).Value = txtPOSITION.Text
             .Offset(TRows, 11).Value = txtTEL_1.Text
             .Offset(TRows, 12).Value = txtTEL_2.Text
             .Offset(TRows, 13).Value = txtemail.Text
             .Offset(TRows, 14).Value = txtFAX.Text
             .Offset(TRows, 15).Value = txtSOLD_TO.Text
-            .Offset(TRows, 16).Value = txtAktywni.Text
+            .Offset(TRows, 16).Value = txtACTIVE.Text
             .Offset(TRows, 17).Value = txtCC2.Text
             .Offset(TRows, 18).Value = txtCC_2.Text
-            .Offset(TRows, 19).Value = CheckBoxPon.Value = .Value
-            .Offset(TRows, 20).Value = CheckBoxWt.Value = .Value
+            .Offset(TRows, 19).Value = CheckBoxMon.Value = .Value
+            .Offset(TRows, 20).Value = CheckBoxTue.Value = .Value
             .Offset(TRows, 21).Value = CheckBoxSr.Value = .Value
             .Offset(TRows, 22).Value = CheckBoxCzw.Value = .Value
             .Offset(TRows, 23).Value = CheckBoxPia.Value = .Value
