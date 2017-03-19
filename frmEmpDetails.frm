@@ -71,7 +71,7 @@ Private Sub cmdDelete_Click() 'delete button
                 txtPLOD.Text = "" 'Route
                 txtWHS.Text = "" 'Warehouse
                 txtCOT.Text = "" 'Cut of time
-                txtCOMMENTS.Text = "" '
+                txtCOMMENTS.Text = ""
                 txtINFO.Text = "" 'additional information
                 Call prComboBoxFill()
 
@@ -109,8 +109,8 @@ End Sub
 
 Private Sub cmdNew_Click()
     blnNew = True
-                txtSAP_NR.Text = ""
-                txtCUSTOMER.Text = ""
+    txtSAP_NR.Text = ""
+    txtCUSTOMER.Text = ""
                 txtCITY.Text = ""
                 txtPOSTAL_CODE.Text = ""
                 txtSTREET.Text = ""
@@ -189,121 +189,121 @@ Private Sub prSave()
             .Offset(TRows, 18).Value = txtCC_2.Text
             .Offset(TRows, 19).Value = CheckBoxMon.Value = .Value
             .Offset(TRows, 20).Value = CheckBoxTue.Value = .Value
-            .Offset(TRows, 21).Value = CheckBoxSr.Value = .Value
-            .Offset(TRows, 22).Value = CheckBoxCzw.Value = .Value
-            .Offset(TRows, 23).Value = CheckBoxPia.Value = .Value
-            .Offset(TRows, 24).Value = CheckBoxSo.Value = .Value
+            .Offset(TRows, 21).Value = CheckBoxWed.Value = .Value
+            .Offset(TRows, 22).Value = CheckBoxThu.Value = .Value
+            .Offset(TRows, 23).Value = CheckBoxFri.Value = .Value
+            .Offset(TRows, 24).Value = CheckBoxSat.Value = .Value
             .Offset(TRows, 25).Value = txtForm.Text
             .Offset(TRows, 26).Value = txtUnit.Text
             .Offset(TRows, 27).Value = txtPLOD.Text
             .Offset(TRows, 28).Value = txtWHS.Text
             .Offset(TRows, 29).Value = txtCOT.Text
-            .Offset(TRows, 30).Value = txtUWAGI.Text
+            .Offset(TRows, 30).Value = txtCOMMENTS.Text
             .Offset(TRows, 31).Value = txtINFO.Text
           
          End With
-                txtSAP_NR.Text = ""
-                txtKLIENT.Text = ""
-                txtMIASTO.Text = ""
-                txtKOD_POCZTOWY.Text = ""
-                txtULICA.Text = ""
-                txtPRZEDSTAWICIEL_HANDLOWY.Text = ""
-                txtTEL_PRZEDSTAWICIEL.Text = ""
-                txtKAM.Text = ""
-                txtCC.Text = ""
-                txtOSOBA_KONTAKTOWA.Text = ""
-                txtSTANOWISKO.Text = ""
-                txtTEL_1.Text = ""
-                txtTEL_2.Text = ""
-                txtemail.Text = ""
-                txtFAX.Text = ""
-                txtSOLD_TO.Text = ""
-                txtAktywni.Text = ""
-                txtCC2.Text = ""
-                txtCC_2.Text = ""
-                CheckBoxPon.Value = ""
-                CheckBoxWt.Value = ""
-                CheckBoxSr.Value = ""
-                CheckBoxCzw.Value = ""
-                CheckBoxPia.Value = ""
-                CheckBoxSo.Value = ""
-                txtForm.Text = ""
-                txtUnit.Text = ""
-                txtPLOD.Text = ""
-                txtWHS.Text = ""
-                txtCOT.Text = ""
-                txtUWAGI.Text = ""
-                txtINFO.Text = ""
-            Call prComboBoxFill
-'do poprawy od tego miejsca
-     Else
+        txtSAP_NR.Text = "" 'Customer SAP number
+        txtCUSTOMER.Text = "" 'Cusotmer name
+        txtCITY.Text = "" 'Customer city
+        txtPOSTAL_CODE.Text = "" ' CUstomer postal code
+        txtSTREET.Text = "" 'Customer street name
+        txtSALES_REPRESENTATIVE.Text = "" 'Customer sales representative
+        txtTEL_REPRESENTATIVE.Text = "" 'Phone number to sales representative
+        txtKAM.Text = "" 'Key Account Manager
+        txtCC.Text = "" 'Customer care employee responsible for client
+        txtCONTACT_PERSON.Text = "" 'Contact person on customer side
+        txtPOSITION.Text = "" 'Contatc person position on customer side
+        txtTEL_1.Text = "" '1st Telephone number to customer
+        txtTEL_2.Text = "" '2nd telephone number to cusotmer
+        txtemail.Text = "" 'Customer e-mail adress
+        txtFAX.Text = ""
+        txtSOLD_TO.Text = "" 'optional when goods are sold to another customer number
+        txtACTIVE.Text = "" 'is the customer active
+        txtCC2.Text = "" 'Customer care employee responsible for client when main person is off
+        txtCC_2.Text = "" 'Customer care employee responsible for client- shortcut
+        CheckBoxMon.Value = "" 'check box for Monday
+        CheckBoxTue.Value = "" 'check box for Tuesday
+        CheckBoxWed.Value = "" 'check box for Wednesday
+        CheckBoxThu.Value = "" 'check box for Thuesday
+        CheckBoxFri.Value = "" 'check box for Friday
+        CheckBoxSat.Value = "" 'check box for Saturday
+        txtForm.Text = "" 'How client make and order
+        txtUnit.Text = "" 'Unit on order
+        txtPLOD.Text = "" 'Route
+        txtWHS.Text = "" 'Warehouse
+        txtCOT.Text = "" 'Cut of time
+        txtCOMMENTS.Text = ""
+        txtINFO.Text = "" 'additional information
+        Call prComboBoxFill()
+
+    Else
         For i = 2 To TRows
             If Trim(Worksheets("Data").Cells(i, 1).Value) = Trim(ComboBox1.Text) Then
                 Worksheets("Data").Cells(i, 1).Value = txtSAP_NR.Text
-                Worksheets("Data").Cells(i, 2).Value = txtKLIENT.Text
-                Worksheets("Data").Cells(i, 3).Value = txtMIASTO.Text
-                Worksheets("Data").Cells(i, 4).Value = txtKOD_POCZTOWY.Text
-                Worksheets("Data").Cells(i, 5).Value = txtULICA.Text
-                Worksheets("Data").Cells(i, 6).Value = txtPRZEDSTAWICIEL_HANDLOWY.Text
-                Worksheets("Data").Cells(i, 7).Value = txtTEL_PRZEDSTAWICIEL.Text
+                Worksheets("Data").Cells(i, 2).Value = txtCUSTOMER.Text
+                Worksheets("Data").Cells(i, 3).Value = txtCITY.Text
+                Worksheets("Data").Cells(i, 4).Value = txtPOSTAL_CODE.Text
+                Worksheets("Data").Cells(i, 5).Value = txtSTREET.Text
+                Worksheets("Data").Cells(i, 6).Value = txtSALES_REPRESENTATIVE.Text
+                Worksheets("Data").Cells(i, 7).Value = txtTEL_REPRESENTATIVE.Text
                 Worksheets("Data").Cells(i, 8).Value = txtKAM.Text
                 Worksheets("Data").Cells(i, 9).Value = txtCC.Text
-                Worksheets("Data").Cells(i, 10).Value = txtOSOBA_KONTAKTOWA.Text
-                Worksheets("Data").Cells(i, 11).Value = txtSTANOWISKO.Text
+                Worksheets("Data").Cells(i, 10).Value = txtCONTACT_PERSON.Text
+                Worksheets("Data").Cells(i, 11).Value = txtPOSITION.Text
                 Worksheets("Data").Cells(i, 12).Value = txtTEL_1.Text
                 Worksheets("Data").Cells(i, 13).Value = txtTEL_2.Text
                 Worksheets("Data").Cells(i, 14).Value = txtemail.Text
                 Worksheets("Data").Cells(i, 15).Value = txtFAX.Text
                 Worksheets("Data").Cells(i, 16).Value = txtSOLD_TO.Text
-                Worksheets("Data").Cells(i, 17).Value = txtAktywni.Text
+                Worksheets("Data").Cells(i, 17).Value = txtACTIVE.Text
                 Worksheets("Data").Cells(i, 18).Value = txtCC2.Text
                 Worksheets("Data").Cells(i, 19).Value = txtCC_2.Text
-                Worksheets("Data").Cells(i, 20).Value = CheckBoxPon.Value
-                Worksheets("Data").Cells(i, 21).Value = CheckBoxWt.Value
-                Worksheets("Data").Cells(i, 22).Value = CheckBoxSr.Value
-                Worksheets("Data").Cells(i, 23).Value = CheckBoxCzw.Value
-                Worksheets("Data").Cells(i, 24).Value = CheckBoxPia.Value
-                Worksheets("Data").Cells(i, 25).Value = CheckBoxSo.Value
+                Worksheets("Data").Cells(i, 20).Value = CheckBoxMon.Value
+                Worksheets("Data").Cells(i, 21).Value = CheckBoxTue.Value
+                Worksheets("Data").Cells(i, 22).Value = CheckBoxWed.Value
+                Worksheets("Data").Cells(i, 23).Value = CheckBoxThu.Value
+                Worksheets("Data").Cells(i, 24).Value = CheckBoxFri.Value
+                Worksheets("Data").Cells(i, 25).Value = CheckBoxSat.Value
                 Worksheets("Data").Cells(i, 26).Value = txtForm.Text
                 Worksheets("Data").Cells(i, 27).Value = txtUnit.Text
                 Worksheets("Data").Cells(i, 28).Value = txtPLOD.Text
                 Worksheets("Data").Cells(i, 29).Value = txtWHS.Text
                 Worksheets("Data").Cells(i, 30).Value = txtCOT.Text
-                Worksheets("Data").Cells(i, 31).Value = txtUWAGI.Text
+                Worksheets("Data").Cells(i, 31).Value = txtCOMMENTS.Text
                 Worksheets("Data").Cells(i, 32).Value = txtINFO.Text
-                
-                txtSAP_NR.Text = ""
-                txtKLIENT.Text = ""
-                txtMIASTO.Text = ""
-                txtKOD_POCZTOWY.Text = ""
-                txtULICA.Text = ""
-                txtPRZEDSTAWICIEL_HANDLOWY.Text = ""
-                txtTEL_PRZEDSTAWICIEL.Text = ""
-                txtKAM.Text = ""
-                txtCC.Text = ""
-                txtOSOBA_KONTAKTOWA.Text = ""
-                txtSTANOWISKO.Text = ""
-                txtTEL_1.Text = ""
-                txtTEL_2.Text = ""
-                txtemail.Text = ""
+
+                txtSAP_NR.Text = "" 'Customer SAP number
+                txtCUSTOMER.Text = "" 'Cusotmer name
+                txtCITY.Text = "" 'Customer city
+                txtPOSTAL_CODE.Text = "" ' CUstomer postal code
+                txtSTREET.Text = "" 'Customer street name
+                txtSALES_REPRESENTATIVE.Text = "" 'Customer sales representative
+                txtTEL_REPRESENTATIVE.Text = "" 'Phone number to sales representative
+                txtKAM.Text = "" 'Key Account Manager
+                txtCC.Text = "" 'Customer care employee responsible for client
+                txtCONTACT_PERSON.Text = "" 'Contact person on customer side
+                txtPOSITION.Text = "" 'Contatc person position on customer side
+                txtTEL_1.Text = "" '1st Telephone number to customer
+                txtTEL_2.Text = "" '2nd telephone number to cusotmer
+                txtemail.Text = "" 'Customer e-mail adress
                 txtFAX.Text = ""
-                txtSOLD_TO.Text = ""
-                txtAktywni.Text = ""
-                txtCC2.Text = ""
-                txtCC_2.Text = ""
-                CheckBoxPon.Value = ""
-                CheckBoxWt.Value = ""
-                CheckBoxSr.Value = ""
-                CheckBoxCzw.Value = ""
-                CheckBoxPia.Value = ""
-                CheckBoxSo.Value = ""
-                txtForm.Text = ""
-                txtUnit.Text = ""
-                txtPLOD.Text = ""
-                txtWHS.Text = ""
-                txtCOT.Text = ""
-                txtUWAGI.Text = ""
-                txtINFO.Text = ""
+                txtSOLD_TO.Text = "" 'optional when goods are sold to another customer number
+                txtACTIVE.Text = "" 'is the customer active
+                txtCC2.Text = "" 'Customer care employee responsible for client when main person is off
+                txtCC_2.Text = "" 'Customer care employee responsible for client- shortcut
+                CheckBoxMon.Value = "" 'check box for Monday
+                CheckBoxTue.Value = "" 'check box for Tuesday
+                CheckBoxWed.Value = "" 'check box for Wednesday
+                CheckBoxThu.Value = "" 'check box for Thuesday
+                CheckBoxFri.Value = "" 'check box for Friday
+                CheckBoxSat.Value = "" 'check box for Saturday
+                txtForm.Text = "" 'How client make and order
+                txtUnit.Text = "" 'Unit on order
+                txtPLOD.Text = "" 'Route
+                txtWHS.Text = "" 'Warehouse
+                txtCOT.Text = "" 'Cut of time
+                txtCOMMENTS.Text = ""
+                txtINFO.Text = "" 'additional information
                 Exit For
             End If
         Next i
@@ -314,86 +314,86 @@ Private Sub prSave()
         cmdSave.Enabled = False
         cmdDelete.Enabled = False
         Frame2.Enabled = True
-        cmdClose.Caption = "Zamknij"
+        cmdClose.Caption = "Close"
     Else
         cmdSave.Enabled = True
         cmdDelete.Enabled = True
         Frame2.Enabled = True
         Frame3.Enabled = True
-        cmdClose.Caption = "Zamknij"
+        cmdClose.Caption = "Close"
     End If
 End Sub
 
 Private Sub cmdSearch_Click()
     blnNew = False
-                txtSAP_NR.Text = ""
-                txtKLIENT.Text = ""
-                txtMIASTO.Text = ""
-                txtKOD_POCZTOWY.Text = ""
-                txtULICA.Text = ""
-                txtPRZEDSTAWICIEL_HANDLOWY.Text = ""
-                txtTEL_PRZEDSTAWICIEL.Text = ""
-                txtKAM.Text = ""
-                txtCC.Text = ""
-                txtOSOBA_KONTAKTOWA.Text = ""
-                txtSTANOWISKO.Text = ""
-                txtTEL_1.Text = ""
-                txtTEL_2.Text = ""
-                txtemail.Text = ""
-                txtFAX.Text = ""
-                txtSOLD_TO.Text = ""
-                txtAktywni.Value = ""
-                txtCC2.Text = ""
-                txtCC_2.Text = ""
-                CheckBoxPon.Value = ""
-                CheckBoxWt.Value = ""
-                CheckBoxSr.Value = ""
-                CheckBoxCzw.Value = ""
-                CheckBoxPia.Value = ""
-                CheckBoxSo.Value = ""
-                txtForm.Text = ""
-                txtUnit.Text = ""
-                txtPLOD.Text = ""
-                txtWHS.Text = ""
-                txtCOT.Text = ""
-                txtUWAGI.Text = ""
-                txtINFO.Text = ""
-                
+    txtSAP_NR.Text = "" 'Customer SAP number
+    txtCUSTOMER.Text = "" 'Cusotmer name
+    txtCITY.Text = "" 'Customer city
+    txtPOSTAL_CODE.Text = "" ' CUstomer postal code
+    txtSTREET.Text = "" 'Customer street name
+    txtSALES_REPRESENTATIVE.Text = "" 'Customer sales representative
+    txtTEL_REPRESENTATIVE.Text = "" 'Phone number to sales representative
+    txtKAM.Text = "" 'Key Account Manager
+    txtCC.Text = "" 'Customer care employee responsible for client
+    txtCONTACT_PERSON.Text = "" 'Contact person on customer side
+    txtPOSITION.Text = "" 'Contatc person position on customer side
+    txtTEL_1.Text = "" '1st Telephone number to customer
+    txtTEL_2.Text = "" '2nd telephone number to cusotmer
+    txtemail.Text = "" 'Customer e-mail adress
+    txtFAX.Text = ""
+    txtSOLD_TO.Text = "" 'optional when goods are sold to another customer number
+    txtACTIVE.Text = "" 'is the customer active
+    txtCC2.Text = "" 'Customer care employee responsible for client when main person is off
+    txtCC_2.Text = "" 'Customer care employee responsible for client- shortcut
+    CheckBoxMon.Value = "" 'check box for Monday
+    CheckBoxTue.Value = "" 'check box for Tuesday
+    CheckBoxWed.Value = "" 'check box for Wednesday
+    CheckBoxThu.Value = "" 'check box for Thuesday
+    CheckBoxFri.Value = "" 'check box for Friday
+    CheckBoxSat.Value = "" 'check box for Saturday
+    txtForm.Text = "" 'How client make and order
+    txtUnit.Text = "" 'Unit on order
+    txtPLOD.Text = "" 'Route
+    txtWHS.Text = "" 'Warehouse
+    txtCOT.Text = "" 'Cut of time
+    txtCOMMENTS.Text = ""
+    txtINFO.Text = "" 'additional information
+
     TRows = Worksheets("Data").Range("A1").CurrentRegion.Rows.Count
     For i = 2 To TRows
         If Val(Trim(Worksheets("Data").Cells(i, 1).Value)) = Val(Trim(ComboBox1.Text)) Then
                 
             txtSAP_NR.Text = Worksheets("Data").Cells(i, 1).Value
-            txtKLIENT.Text = Worksheets("Data").Cells(i, 2).Value
-            txtMIASTO.Text = Worksheets("Data").Cells(i, 3).Value
-            txtKOD_POCZTOWY.Text = Worksheets("Data").Cells(i, 4).Value
-            txtULICA.Text = Worksheets("Data").Cells(i, 5).Value
-            txtPRZEDSTAWICIEL_HANDLOWY.Text = Worksheets("Data").Cells(i, 6).Value
-            txtTEL_PRZEDSTAWICIEL.Text = Worksheets("Data").Cells(i, 7).Value
+            txtCUSTOMER.Text = Worksheets("Data").Cells(i, 2).Value
+            txtCITY.Text = Worksheets("Data").Cells(i, 3).Value
+            txtPOSTAL_CODE.Text = Worksheets("Data").Cells(i, 4).Value
+            txtSTREET.Text = Worksheets("Data").Cells(i, 5).Value
+            txtSALES_REPRESENTATIVE.Text = Worksheets("Data").Cells(i, 6).Value
+            txtTEL_REPRESENTATIVE.Text = Worksheets("Data").Cells(i, 7).Value
             txtKAM.Text = Worksheets("Data").Cells(i, 8).Value
             txtCC.Text = Worksheets("Data").Cells(i, 9).Value
-            txtOSOBA_KONTAKTOWA.Text = Worksheets("Data").Cells(i, 10).Value
-            txtSTANOWISKO.Text = Worksheets("Data").Cells(i, 11).Value
+            txtCONTACT_PERSON.Text = Worksheets("Data").Cells(i, 10).Value
+            txtPOSITION.Text = Worksheets("Data").Cells(i, 11).Value
             txtTEL_1.Text = Worksheets("Data").Cells(i, 12).Value
             txtTEL_2.Text = Worksheets("Data").Cells(i, 13).Value
             txtemail.Text = Worksheets("Data").Cells(i, 14).Value
             txtFAX.Text = Worksheets("Data").Cells(i, 15).Value
             txtSOLD_TO.Text = Worksheets("Data").Cells(i, 16).Value
-            txtAktywni.Value = Worksheets("Data").Cells(i, 17).Value
+            txtACTIVE.Value = Worksheets("Data").Cells(i, 17).Value
             txtCC2.Text = Worksheets("Data").Cells(i, 18).Value
             txtCC_2.Text = Worksheets("Data").Cells(i, 19).Value
-            CheckBoxPon.Value = Worksheets("Data").Cells(i, 20).Value
-            CheckBoxWt.Value = Worksheets("Data").Cells(i, 21).Value
-            CheckBoxSr.Value = Worksheets("Data").Cells(i, 22).Value
-            CheckBoxCzw.Value = Worksheets("Data").Cells(i, 23).Value
-            CheckBoxPia.Value = Worksheets("Data").Cells(i, 24).Value
-            CheckBoxSo.Value = Worksheets("Data").Cells(i, 25).Value
+            CheckBoxMon.Value = Worksheets("Data").Cells(i, 20).Value
+            CheckBoxTue.Value = Worksheets("Data").Cells(i, 21).Value
+            CheckBoxWed.Value = Worksheets("Data").Cells(i, 22).Value
+            CheckBoxThu.Value = Worksheets("Data").Cells(i, 23).Value
+            CheckBoxFri.Value = Worksheets("Data").Cells(i, 24).Value
+            CheckBoxSat.Value = Worksheets("Data").Cells(i, 25).Value
             txtForm.Text = Worksheets("Data").Cells(i, 26).Value
             txtUnit.Text = Worksheets("Data").Cells(i, 27).Value
             txtPLOD.Text = Worksheets("Data").Cells(i, 28).Value
             txtWHS.Text = Worksheets("Data").Cells(i, 29).Value
             txtCOT.Text = Worksheets("Data").Cells(i, 30).Value
-            txtUWAGI.Text = Worksheets("Data").Cells(i, 31).Value
+            txtCOMMENTS.Text = Worksheets("Data").Cells(i, 31).Value
             txtINFO.Text = Worksheets("Data").Cells(i, 32).Value
             Exit For
         End If
@@ -411,7 +411,7 @@ Private Sub cmdSearch_Click()
         Frame2.Enabled = True
         Frame3.Enabled = True
         Frame1.Enabled = True
-        cmdClose.Caption = "Zamknij"
+        cmdClose.Caption = "Close"
     End If
 End Sub
 Private Sub prComboBoxFill()
@@ -426,17 +426,17 @@ Private Sub MonthView1_DateClick(ByVal DateClicked As Date)
 
 End Sub
 
-Private Sub txtAktywni_Change()
-If txtAktywni.Value = "TAK" Then
-'txtAktywni.ForeColor = RGB(0, 255, 0)
-txtAktywni.BackColor = RGB(0, 255, 0)
-Else
-If txtAktywni.Value = "NIE" Then
-'txtAktywni.ForeColor = RGB(255, 0, 0)
-txtAktywni.BackColor = RGB(255, 0, 0)
+Private Sub txtACTIVE_Change()
+    If txtACTIVE.Value = "YES" Then
+        'txtAktywni.ForeColor = RGB(0, 255, 0)
+        txtACTIVE.BackColor = RGB(0, 255, 0)
+    Else
+        If txtACTIVE.Value = "NO" Then
+            'txtAktywni.ForeColor = RGB(255, 0, 0)
+            txtACTIVE.BackColor = RGB(255, 0, 0)
 
-End If
-End If
+        End If
+    End If
 End Sub
 
 
