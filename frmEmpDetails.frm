@@ -428,11 +428,11 @@ End Sub
 
 Private Sub txtACTIVE_Change()
     If txtACTIVE.Value = "YES" Then
-        'txtAktywni.ForeColor = RGB(0, 255, 0)
+        'txtACTIVE.ForeColor = RGB(0, 255, 0)
         txtACTIVE.BackColor = RGB(0, 255, 0)
     Else
         If txtACTIVE.Value = "NO" Then
-            'txtAktywni.ForeColor = RGB(255, 0, 0)
+            'txtACTIVE.ForeColor = RGB(255, 0, 0)
             txtACTIVE.BackColor = RGB(255, 0, 0)
 
         End If
@@ -452,6 +452,6 @@ Private Sub UserForm_Initialize()
     Frame2.Enabled = True
     cmdNew.Enabled = True
     cmdClose.Enabled = True
-    cmdClose.Caption = "Zamknij"
+    cmdClose.Caption = "Close"
     Application.Visible = False
 End Sub
